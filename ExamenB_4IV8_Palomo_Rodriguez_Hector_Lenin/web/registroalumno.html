@@ -8,11 +8,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="./js/registroalumno.js"></script>
     </head>
     <body>
         <fieldset>
             <legend>Registro de alumno</legend>
-            <form name="frm_registro_cuenta" action="AlumRegistro" method="post" onsubmit="validarDatos()">
+            <form name="frm_registro_cuenta" action="AlumRegistro" method="post" onsubmit="return validarDatos()">
         <div id="indicacion1">
             <h1>Rellena todos los campos que se piden a continuación</h1>
             
@@ -25,21 +26,21 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
           <div id="campo1">
             <label>
                 Boleta*:
-                <input type="text" id="boleta" name="Boleta" size="10" maxlength="10">
+                <input type="text" id="boleta" name="Boleta" size="10" maxlength="10" required>
             </label>
         </div>
         <br>
         <div id="campo2">
             <label>
                 Nombre*:
-                <input type="text" id="name" name="Nombre" size="50" maxlength="50">
+                <input type="text" id="name" name="Nombre" size="50" maxlength="50" required>
             </label>
         </div>
         <br>
          <div id="campo3">
             <label>
                 Primer apellido*:
-                <input type="text" id="apellido1" name="Primerapellido" size="50" maxlength="50">
+                <input type="text" id="apellido1" name="Primerapellido" size="50" maxlength="50" required>
             </label>
         </div>
         <br>
@@ -53,7 +54,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <div id="campo5">
             <label>
                 Semestre*:
-                <select name="Semestre" id="semestre">
+                <select name="Semestre" id="semestre" required>
                     <option value=""></option>
                     <option value="1">Semestre 1</option>
                     <option value="2">Semestre 2</option>
@@ -68,7 +69,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <div id="campo6">
             <label>
                 Turno*:
-                <select name="Turno" id="turno">
+                <select name="Turno" id="turno" required>
                     <option value=""></option>
                     <option value="M">Matutino</option>
                     <option value="V">Vespertino</option>
@@ -79,12 +80,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <div id="campo7">
             <label>
                 Contraseña*:
-                <input type="text" id="password" name="Contraseña" size="100" maxlength="100">
+                <input type="text" id="password" name="Contraseña" size="100" maxlength="100" required>
             </label>
         </div>
         <br>
         <div id="registraralumno">
-            <button>Registrarse</button>
+            <input type="submit" value="Registrarse">
             <h3>* Campos Obligatorios</h3>
         </div>
         <br>
