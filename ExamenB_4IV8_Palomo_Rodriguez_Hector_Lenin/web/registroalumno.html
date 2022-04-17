@@ -12,7 +12,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <body>
         <fieldset>
             <legend>Registro de alumno</legend>
-        <form name="frm_registro_cuenta" action="AlumRegistro" method="post">
+            <form name="frm_registro_cuenta" action="AlumRegistro" method="post" onsubmit="validarDatos()">
         <div id="indicacion1">
             <h1>Rellena todos los campos que se piden a continuación</h1>
             
@@ -24,55 +24,68 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <br>
           <div id="campo1">
             <label>
-                Boleta
-                <input type="text" id="boleta" name="Boleta">
+                Boleta*:
+                <input type="text" id="boleta" name="Boleta" size="10" maxlength="10">
             </label>
         </div>
         <br>
         <div id="campo2">
             <label>
-                Nombre
-                <input type="text" id="name" name="Nombre">
+                Nombre*:
+                <input type="text" id="name" name="Nombre" size="50" maxlength="50">
             </label>
         </div>
         <br>
          <div id="campo3">
             <label>
-                Primer apellido
-                <input type="text" id="apellido1" name="Primerapellido">
+                Primer apellido*:
+                <input type="text" id="apellido1" name="Primerapellido" size="50" maxlength="50">
             </label>
         </div>
         <br>
          <div id="campo4">
             <label>
                 Segundo apellido
-                <input type="text" id="apellido2" name="Segundoapellido">
+                <input type="text" id="apellido2" name="Segundoapellido" size="50" maxlength="50">
             </label>
         </div>
         <br>
         <div id="campo5">
             <label>
-                Semestre
-                <input type="text" id="Semestre" name="Semestre">
+                Semestre*:
+                <select name="Semestre" id="semestre">
+                    <option value=""></option>
+                    <option value="1">Semestre 1</option>
+                    <option value="2">Semestre 2</option>
+                    <option value="3">Semestre 3</option>
+                    <option value="4">Semestre 4</option>
+                    <option value="5">Semestre 5</option>
+                    <option value="6">Semestre 6</option>
+                </select>
             </label>
         </div>
         <br>
         <div id="campo6">
             <label>
-                Turno
-                <input type="text" id="turno" name="Turno">
+                Turno*:
+                <select name="Turno" id="turno">
+                    <option value=""></option>
+                    <option value="M">Matutino</option>
+                    <option value="V">Vespertino</option>
+                </select>
             </label>
         </div>
         <br>
         <div id="campo7">
             <label>
-                Contraseña
-                <input type="text" id="password" name="Contraseña">
+                Contraseña*:
+                <input type="text" id="password" name="Contraseña" size="100" maxlength="100">
             </label>
         </div>
         <br>
         <div id="registraralumno">
             <button>Registrarse</button>
+            <h3>* Campos Obligatorios</h3>
         </div>
         <br>
         </form>
