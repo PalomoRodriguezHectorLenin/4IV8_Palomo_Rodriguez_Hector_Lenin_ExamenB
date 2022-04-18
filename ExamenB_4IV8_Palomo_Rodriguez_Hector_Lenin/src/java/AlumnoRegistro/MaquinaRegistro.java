@@ -4,6 +4,7 @@
  */
 package AlumnoRegistro;
 
+import jakarta.servlet.ServletConfig;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -11,6 +12,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.sql.Connection;
+import java.sql.DriverManager;
 
 /**
  *
@@ -19,6 +22,27 @@ import jakarta.servlet.http.HttpServletResponse;
 @WebServlet(name = "MaquinaRegistro", urlPatterns = {"/MaquinaRegistro"})
 public class MaquinaRegistro extends HttpServlet {
 
+        private Connection con;
+    public void init(ServletConfig scg) throws ServletException {
+        // se deben de establecer los elementos para la conexion con bd
+        String url = "jdbc:mysql://localhost:3306/maquinas";
+        //controlador:motorBD:puerto/IP/nombreBD
+        String username = "root";
+        String password = "L3usM4fi3r-";
+
+        try {
+            //internat concetar a la bd
+            Class.forName("com.mysql.jdbc.Driver");
+
+            con = DriverManager.getConnection(url, username, password);
+
+        } catch (Exception e) {
+            System.out.println("No conecto");
+            System.out.println(e.getMessage());
+            System.out.println(e.getStackTrace());
+        }
+    }
+    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -31,6 +55,15 @@ public class MaquinaRegistro extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        
+        String marca = request.getParameter("Marca");
+        String modelo = request.getParameter("Modelo");
+        String laboratorio = request.getParameter("Laboratorio");
+        String maquina = request.getParameter("Maquina");
+        String fregistro = request.getParameter("Fecharegistro");
+        
+        
+        
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
