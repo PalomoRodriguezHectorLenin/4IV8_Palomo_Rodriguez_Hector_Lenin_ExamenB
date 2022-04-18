@@ -11,6 +11,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <script type="text/javascript" src="./js/registroalumno.js"></script>
     </head>
     <body>
+        <button onclick="window.location='./index.html'">Inicio</button>
         <fieldset>
             <legend>Registro de alumno</legend>
             <form name="frm_registro_cuenta" action="AlumRegistro" method="post" onsubmit="return validarDatos()">
@@ -33,21 +34,21 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <div id="campo2">
             <label>
                 Nombre*:
-                <input type="text" id="name" name="Nombre" size="50" maxlength="50" required>
+                <input type="text" id="nombre" name="Nombre" size="50" maxlength="50" required>
             </label>
         </div>
         <br>
          <div id="campo3">
             <label>
                 Primer apellido*:
-                <input type="text" id="apellido1" name="Primerapellido" size="50" maxlength="50" required>
+                <input type="text" id="primerapellido" name="Primerapellido" size="50" maxlength="50" required>
             </label>
         </div>
         <br>
          <div id="campo4">
             <label>
                 Segundo apellido
-                <input type="text" id="apellido2" name="Segundoapellido" size="50" maxlength="50">
+                <input type="text" id="segundoapellido" name="Segundoapellido" size="50" maxlength="50">
             </label>
         </div>
         <br>
@@ -80,7 +81,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <div id="campo7">
             <label>
                 Contraseña*:
-                <input type="text" id="password" name="Contraseña" size="100" maxlength="100" required>
+                <input type="password" id="password" name="Password" size="32" maxlength="32" required>
+            </label>
+        </div>
+        <br>
+        <div id="campo8">
+            <label>
+                Repetir contraseña*:
+                <input type="password" id="password2" name="Password2" size="32" maxlength="32" required>
             </label>
         </div>
         <br>

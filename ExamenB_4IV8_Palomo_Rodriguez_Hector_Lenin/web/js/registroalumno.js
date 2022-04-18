@@ -1,12 +1,13 @@
 
 function validarDatos(){
     var boleta = document.getElementById("boleta");
-    var nombre = document.getElementById("name");
-    var primerApellido = document.getElementById("apellido1");
-    var segundoApellido = document.getElementById("apellido2");
+    var nombre = document.getElementById("nombre");
+    var primerApellido = document.getElementById("primerapellido");
+    var segundoApellido = document.getElementById("segundoapellido");
     var semestre = document.getElementById("semestre");
     var turno = document.getElementById("turno");
-    var contraseña = document.getElementById("password");
+    var password = document.getElementById("password");
+    var password2 = document.getElementById("password2")
     
     if(boleta.value.trim()== ""){
         alert("Debes de ingresar tu boleta");
@@ -28,7 +29,7 @@ function validarDatos(){
                             alert("Debes de seleccionar tu turno");
                             return false;
                         }else{
-                            if(contraseña.value.trim()==""){
+                            if(password.value.trim()==""){
                                 alert("Debes de crear una contraseña");
                                 return false;
                         }
@@ -37,4 +38,11 @@ function validarDatos(){
             }
         }
     }
+    if(password.value != password2.value){
+        alert("La contraseña no coincide");
+        return false;
+    }
+    
+    return true;
+    
 }
