@@ -37,3 +37,141 @@
     width: 100px;
     height: 40px;
 }
+
+#Boton4{
+    width: 100px;
+    height: 40px;
+}
+
+#Boton5{
+    width: 100px;
+    height: 40px;
+}
+
+#Boton6{
+    width: 100px;
+    height: 40px;
+}
+
+#indicacion1{
+    background-color:burlywood;
+    position:static;
+    left: 300px;
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+}
+
+#campo1{
+    position:abstolute;
+    background-color:darksalmon;
+    height: 25px;
+}
+
+#instrucciones2{
+  background-color:burlywood;
+    position:static;
+    left: 300px;
+    width: 100%;  
+}
+
+#campoini{
+    position:abstolute;
+    background-color:darksalmon;
+    height: 25px;
+}
+
+#campoini2{
+    position:abstolute;
+    background-color:darksalmon;
+    height: 25px;
+}
+
+#Boton7{
+    width: 100px;
+    height: 40px;
+}
+
+#Boton8{
+    width: 100px;
+    height: 40px;
+}
+
+#titulo{
+    background-color:burlywood;
+    position:static;
+    left: 300px;
+    width: 100%;
+}
+
+h2{
+    text-align: center;
+}
+
+#botonini1{
+    position: absolute;
+    left: 620px;
+    top: 150px;
+}
+
+#Boton9{
+   width: 130px;
+    height: 40px 
+}
+
+#botonini2{
+    position: absolute;
+    left: 620px;
+    top: 210px;
+}
+
+#Boton10{
+    width: 130px;
+    height: 40px 
+}
+
+#botonini3{
+    position: absolute;
+    left: 620px;
+    top: 270px;
+}
+
+#Boton11{
+    width: 130px;
+    height: 40px 
+}
+
+#botonini4{
+    position: absolute;
+    left: 620px;
+    top: 330px;
+}
+
+#Boton12{
+    width: 130px;
+    height: 40px 
+}
+
+#botonini5{
+    position: absolute;
+    left: 620px;
+    top: 390px;
+}
+
+#Boton13{
+    width: 130px;
+    height: 40px 
+}
+
+#botonini6{
+    position: absolute;
+    left: 620px;
+    top: 450px;
+}
+
+#Boton14{
+    width: 130px;
+    height: 40px 
+}

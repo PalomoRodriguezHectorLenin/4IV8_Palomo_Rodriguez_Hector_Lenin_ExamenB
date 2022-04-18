@@ -9,14 +9,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="text/javascript" src="./js/iniciarsesion.js"></script>
+        <link rel="stylesheet" href="./css/Estilos.css">
     </head>
     <body>
-        <button onclick="window.location='./index.html'">Inicio</button>
+        <button onclick="window.location='./index.html'" id="Boton7">Inicio</button>
         <fieldset>
             <legend>Iniciar sesión</legend>
         <form name="frm_inicio_sesion" action="Iniciosesion" method="post" onsubmit="return validarDatosIniciarSesion()">
         <div id="instrucciones2">
-            <h1>Introduzca su nombre y su contraseña</h1>
+            <h1>Introduzca su boleta y su contraseña</h1>
         </div>
         <br>
         <div id="campoini">
@@ -34,7 +35,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </div>
         <br>
         <div id="iniciarsesionalum">
-            <input type="submit" value="Iniciar sesion">
+            <input type="submit" value="Iniciar sesion" id="Boton8">
         </div>
         </form>
             </fieldset>

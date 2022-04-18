@@ -23,6 +23,7 @@
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/Estilos.css">
     </head>
     <body>
         <h5>Usuario:<%=usuario%> Nombre:<%=nombre%> Primer apellido:<%=primerApellido%> Segundo apellido:<%=segundoApellido%> Semestre:<%=semestre%> Turno:<%=turno%> </h5>
@@ -30,27 +31,27 @@
         <h2>Menú</h2>
         </div>
         <div id="botonini1">
-            <button onclick="window.location='./registromaquina.html'">Registrar Maquina</button>
+            <button onclick="window.location='./registromaquina.html'" id="Boton9">Registrar Maquina</button>
         </div>
         <br>
         <div id="botonini2">
-            <button onclick="window.location='./perfildelusuario.html'">Perfil del usuario</button>
+            <button onclick="window.location='./perfildelusuario.html'" id="Boton10">Perfil del usuario</button>
         </div>
         <br>
         <div id="botonini3">
-            <button onclick="window.location='./registrodeproblematecnico.html'">Registro de problema técnico</button>
+            <button onclick="window.location='./registrodeproblematecnico.html'" id="Boton11">Registro de problema técnico</button>
         </div>
         <br>
         <div id="botonini4">
-            <button onclick="window.location='./consultarbitacora.html'">Consultar Bitacora</button>
+            <button onclick="window.location='./consultarbitacora.html'" id="Boton12">Consultar Bitacora</button>
         </div>
         <br>
         <div id="botonini5">
-            <button onclick="window.location='./consultardatosdelamaquina.html'">Consultar datos de la maquina</button>
+            <button onclick="window.location='./consultardatosdelamaquina.html'" id="Boton13">Consultar datos de la maquina</button>
         </div>
         <br>
-        <div>
-            <button onclick="window.location='./Cerrarsesion'">Cerrar Sesión</button>
+        <div id="botonini6">
+            <button onclick="window.location='./Cerrarsesion'" id="Boton14">Cerrar Sesión</button>
         </div>
     </body>
 </html>

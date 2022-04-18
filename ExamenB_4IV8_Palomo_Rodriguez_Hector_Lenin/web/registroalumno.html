@@ -9,10 +9,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="text/javascript" src="./js/registroalumno.js"></script>
+        <link rel="stylesheet" href="./css/Estilos.css">
     </head>
     <body>
-        <button onclick="window.location='./index.html'">Inicio</button>
-        <button onclick="window.location='./iniciarsesion.html'">Iniciar sesión</button>
+        <button onclick="window.location='./index.html'" id="Boton4">Inicio</button>
+        <button onclick="window.location='./iniciarsesion.html'" id="Boton5">Iniciar sesión</button>
         <fieldset>
             <legend>Registro de alumno</legend>
             <form name="frm_registro_cuenta" action="AlumRegistro" method="post" onsubmit="return validarDatos()">
@@ -28,35 +29,35 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             </label>
         </div>
         <br>
-        <div id="campo2">
+        <div id="campo1">
             <label>
                 Nombre*:
                 <input type="text" id="nombre" name="Nombre" size="50" maxlength="50" required>
             </label>
         </div>
         <br>
-         <div id="campo3">
+         <div id="campo1">
             <label>
                 Primer apellido*:
                 <input type="text" id="primerapellido" name="Primerapellido" size="50" maxlength="50" required>
             </label>
         </div>
         <br>
-         <div id="campo4">
+         <div id="campo1">
             <label>
                 Segundo apellido
                 <input type="text" id="segundoapellido" name="Segundoapellido" size="50" maxlength="50">
             </label>
         </div>
         <br>
-        <div id="campo3">
+        <div id="campo1">
             <label>
                 Correo Electronico*:
                 <input type="text" id="correo" name="Correo" size="50" maxlength="50" required>
             </label>
         </div>
         <br>
-        <div id="campo5">
+        <div id="campo1">
             <label>
                 Semestre*:
                 <select name="Semestre" id="semestre" required>
@@ -71,7 +72,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             </label>
         </div>
         <br>
-        <div id="campo6">
+        <div id="campo1">
             <label>
                 Turno*:
                 <select name="Turno" id="turno" required>
@@ -82,14 +83,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             </label>
         </div>
         <br>
-        <div id="campo7">
+        <div id="campo1">
             <label>
                 Contraseña*:
                 <input type="password" id="password" name="Password" size="32" maxlength="32" required>
             </label>
         </div>
         <br>
-        <div id="campo8">
+        <div id="campo1">
             <label>
                 Repetir contraseña*:
                 <input type="password" id="password2" name="Password2" size="32" maxlength="32" required>
@@ -97,7 +98,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </div>
         <br>
         <div id="registraralumno">
-            <input type="submit" value="Registrarse">
+            <input type="submit" value="Registrarse" id="Boton6">
             <h3>* Campos Obligatorios</h3>
         </div>
         <br>
