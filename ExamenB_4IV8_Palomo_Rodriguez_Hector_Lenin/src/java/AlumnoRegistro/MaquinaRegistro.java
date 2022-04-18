@@ -14,7 +14,10 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -54,7 +57,7 @@ public class MaquinaRegistro extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
         
         String marca = request.getParameter("Marca");
@@ -74,6 +77,11 @@ public class MaquinaRegistro extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet MaquinaRegistro at " + request.getContextPath() + "</h1>");
+            out.println("<h2>La marca es: "+marca+"</h2>");
+            out.println("<h2>El Modelo es: "+modelo+" </h2>");
+            out.println("<h2>El Laboratorio es: "+laboratorio+"</h2>");
+            out.println("<h2>LEL que la registro fue: "+maquina+"</h2>");
+            out.println("<h2>La fecha fue en: "+fregistro+"</h2>");
             out.println("<button onclick=\"window.location='./inicio.jsp'\"></buttton");
             out.println("</body>");
             out.println("</html>");
@@ -84,12 +92,24 @@ public class MaquinaRegistro extends HttpServlet {
             String modelo,
             String laboratorio,
             String maquina,
-            String freguistro) throws SQLException {
+            String fregistro) throws SQLException {
         
-            String isql ="insert ";
-    
+            String isql ="insert into maquina_registro(modelo,laboratorio,maquina,fregistro)" + "values (?,?,?,?)";
+            PreparedStatement ps = con.prepareStatement(isql);
+            ps.setString(1, modelo);
+            ps.setString(2, laboratorio);
+            ps.setString(3, maquina);
+            ps.setString(4, fregistro);
             return 0;
     
+    }
+    
+     public void destroy() {
+        try {
+            con.close();
+        } catch (Exception e) {
+            super.destroy();
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -104,7 +124,11 @@ public class MaquinaRegistro extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+            try {
+                processRequest(request, response);
+            } catch (SQLException ex) {
+                Logger.getLogger(MaquinaRegistro.class.getName()).log(Level.SEVERE, null, ex);
+            }
     }
 
     /**
@@ -118,7 +142,11 @@ public class MaquinaRegistro extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+            try {
+                processRequest(request, response);
+            } catch (SQLException ex) {
+                Logger.getLogger(MaquinaRegistro.class.getName()).log(Level.SEVERE, null, ex);
+            }
     }
 
     /**
