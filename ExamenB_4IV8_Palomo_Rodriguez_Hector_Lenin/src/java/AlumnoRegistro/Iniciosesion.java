@@ -73,8 +73,8 @@ public class Iniciosesion extends HttpServlet {
             out.println("<title>Servlet Iniciosesion</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet Iniciosesion at " + request.getContextPath() + "</h1>");
-            out.println("<h1></h1>");
+            out.println("<h1>Debe de ingresar un usuario valido</h1>");
+            out.println("<button onclick=\"window.location='./iniciarsesion.html'\">Regresar</button>");
             out.println("</body>");
             out.println("</html>");
         }

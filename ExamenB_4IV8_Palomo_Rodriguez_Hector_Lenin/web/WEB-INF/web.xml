@@ -12,6 +12,10 @@
         <servlet-name>Cerrarsesion</servlet-name>
         <servlet-class>AlumnoRegistro.Cerrarsesion</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>perfildellusuario</servlet-name>
+        <servlet-class>AlumnoRegistro.PerfildelUsuario</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AlumRegistro</servlet-name>
         <url-pattern>/AlumRegistro</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>Cerrarsesion</servlet-name>
         <url-pattern>/Cerrarsesion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>perfildellusuario</servlet-name>
+        <url-pattern>/perfildellusuario</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
