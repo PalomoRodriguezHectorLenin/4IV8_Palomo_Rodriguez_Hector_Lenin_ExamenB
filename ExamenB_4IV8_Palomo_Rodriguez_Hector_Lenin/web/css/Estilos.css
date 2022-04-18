@@ -175,3 +175,51 @@ h2{
     width: 130px;
     height: 40px 
 }
+
+#indicacion3{
+    background-color:burlywood;
+    position:static;
+    left: 300px;
+    width: 100%;
+}
+
+#Boton15{
+    width: 100px;
+    height: 40px;
+}
+
+#Boton16{
+    width: 130px;
+    height: 40px;
+    
+}
+
+#regiscampo1{
+    position:abstolute;
+    background-color:darksalmon;
+    height: 25px;
+}
+
+#regiscampo2{
+    position:abstolute;
+    background-color:darksalmon;
+    height: 25px;
+}
+
+#regiscampo3{
+    position:abstolute;
+    background-color:darksalmon;
+    height: 25px;
+}
+
+#regiscampo4{
+    position:abstolute;
+    background-color:darksalmon;
+    height: 25px;
+}
+
+#regiscampo5{
+    position:abstolute;
+    background-color:darksalmon;
+    height: 25px;
+}

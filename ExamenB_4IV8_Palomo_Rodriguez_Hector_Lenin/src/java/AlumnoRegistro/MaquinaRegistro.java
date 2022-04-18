@@ -63,7 +63,7 @@ public class MaquinaRegistro extends HttpServlet {
         String marca = request.getParameter("Marca");
         String modelo = request.getParameter("Modelo");
         String laboratorio = request.getParameter("Laboratorio");
-        String maquina = request.getParameter("Maquina");
+        String boleta = request.getParameter("Boleta");
         String fregistro = request.getParameter("Fecharegistro");
         int resultado = 0;
         PrintWriter out = response.getWriter();
@@ -83,7 +83,7 @@ public class MaquinaRegistro extends HttpServlet {
 //            out.println("<h2>El Laboratorio es: "+laboratorio+"</h2>");
 //            out.println("<h2>El que la registro fue: "+maquina+"</h2>");
 //            out.println("<h2>La fecha fue en: "+fregistro+"</h2>");
-            resultado = consultaRegistroMaquina(marca,modelo,laboratorio,maquina,fregistro);
+            resultado = consultaRegistroMaquina(marca,modelo,laboratorio,boleta,fregistro);
             if(resultado==1){
                 out.println("<h1>El registro de la maquina fue satisfactorio</h1>");
             }
@@ -108,17 +108,18 @@ public class MaquinaRegistro extends HttpServlet {
     private int consultaRegistroMaquina(String marca,
             String modelo,
             String laboratorio,
-            String maquina,
+            String boleta,
             String fregistro) throws SQLException {
         
-            String isql ="insert into maquina_registro(modelo,laboratorio,maquina,fregistro)" + "values (?,?,?,?,?)";
+            String isql ="insert into maquina_registro(marca,modelo,laboratorio,boleta,fregistro)" + "values(?,?,?,?,?)";
             PreparedStatement ps = con.prepareStatement(isql);
             ps.setString(1, marca);
             ps.setString(2, modelo);
             ps.setString(3, laboratorio);
-            ps.setString(4, maquina);
+            ps.setLong(4, Long.parseLong(boleta));
             ps.setString(5, fregistro);
-            return 0;
+            int resultado = ps.executeUpdate();
+            return resultado;
     
     }
     
