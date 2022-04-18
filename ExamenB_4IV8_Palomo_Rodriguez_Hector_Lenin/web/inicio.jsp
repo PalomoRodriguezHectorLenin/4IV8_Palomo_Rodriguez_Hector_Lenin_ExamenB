@@ -35,7 +35,7 @@
         </div>
         <br>
         <div id="botonini2">
-            <button onclick="window.location='./perfildelusuario.html'" id="Boton10">Perfil del usuario</button>
+            <button onclick="window.location='./perfilusuario.jsp'" id="Boton10">Perfil del usuario</button>
         </div>
         <br>
         <div id="botonini3">
