@@ -8,28 +8,35 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="./js/iniciarsesion.js"></script>
     </head>
     <body>
+        <button onclick="window.location='./index.html'">Inicio</button>
+        <fieldset>
+            <legend>Iniciar sesión</legend>
+        <form name="frm_inicio_sesion" action="Iniciosesion" method="post" onsubmit="return validarDatosIniciarSesion()">
         <div id="instrucciones2">
             <h1>Introduzca su nombre y su contraseña</h1>
         </div>
         <br>
         <div id="campoini">
             <label>
-                Nombre y Apellidos
-                <input type="text" id="name" name="Nombreyapellidos">
+                Boleta
+                <input type="text" id="boleta" name="Boleta">
             </label>
         </div>
         <br>
         <div id="campoini2">
             <label>
-                Contraseña
-                <input type="text" id="password" name="Contraseña">
+                Password
+                <input type="password" id="password" name="Password">
             </label>
         </div>
         <br>
         <div id="iniciarsesionalum">
             <button>Iniciar Sesión</button>
         </div>
+        </form>
+            </fieldset>
     </body>
 </html>
