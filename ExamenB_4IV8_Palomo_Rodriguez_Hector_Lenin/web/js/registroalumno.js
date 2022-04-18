@@ -4,6 +4,7 @@ function validarDatos(){
     var nombre = document.getElementById("nombre");
     var primerApellido = document.getElementById("primerapellido");
     var segundoApellido = document.getElementById("segundoapellido");
+    var correo = document.getElementById("correo");
     var semestre = document.getElementById("semestre");
     var turno = document.getElementById("turno");
     var password = document.getElementById("password");
@@ -21,7 +22,10 @@ function validarDatos(){
                 alert("Debes de ingresar tu primer apellido");
                 return false;
             }else{
-                    if(semestre.value.trim()==""){
+                if(correo.value.trim()==""){
+                    alert("Debes de ingresar tu nombre");
+                    return false;
+                }else{if(semestre.value.trim()==""){
                         alert("Debes de seleccionar tu semestre");
                         return false;
                     }else{
@@ -33,6 +37,8 @@ function validarDatos(){
                                 alert("Debes de crear una contraseña");
                                 return false;
                         }
+                    }
+                    
                     }
                 }
             }

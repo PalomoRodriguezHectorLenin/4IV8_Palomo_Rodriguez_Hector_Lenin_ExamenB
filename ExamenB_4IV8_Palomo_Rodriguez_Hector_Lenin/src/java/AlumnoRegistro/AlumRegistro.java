@@ -35,9 +35,6 @@ public class AlumRegistro extends HttpServlet {
      * sirve para poder realizar las consultas a la BD
      */
     private Connection con;
-    private Statement set;
-    private ResultSet rs;
-
     public void init(ServletConfig scg) throws ServletException {
         // se deben de establecer los elementos para la conexion con bd
         String url = "jdbc:mysql://localhost:3306/maquinas";
@@ -122,6 +119,7 @@ public class AlumRegistro extends HttpServlet {
         String nombre = request.getParameter("Nombre");
         String primerApellido = request.getParameter("Primerapellido");
         String segundoApellido = request.getParameter("Segundoapellido");
+        String correo = request.getParameter("Correo");
         String semestre = request.getParameter("Semestre");
         String turno = request.getParameter("Turno");
         String password = request.getParameter("Password");
@@ -136,7 +134,7 @@ public class AlumRegistro extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<button onclick=\"window.location='./index.html'\">Inicio</button>");
-            resultado = altaCuenta(boleta, nombre, primerApellido, segundoApellido, semestre, turno, password);
+            resultado = altaCuenta(boleta, nombre, primerApellido, segundoApellido, correo, semestre, turno, password);
             if (resultado == 1) {
                 out.println("<h1>El registro fue satisfactorio</h1>");
             }    
@@ -184,19 +182,21 @@ public class AlumRegistro extends HttpServlet {
             String nombre,
             String primerApellido,
             String segundoApellido,
+            String correo,
             String semestre,
             String turno,
             String password) throws SQLException {
-        String isql = "insert into cuenta_alumno(boleta,nombres,primer_apellido,segundo_apellido,semestre,turno,password)"
-                + " values(?,?,?,?,?,?,?)";
+        String isql = "insert into cuenta_alumno(boleta,nombres,primer_apellido,segundo_apellido,correo,semestre,turno,password)"
+                + " values(?,?,?,?,?,?,?,?)";
         PreparedStatement ps = con.prepareStatement(isql);
         ps.setLong(1, Long.parseLong(boleta));
         ps.setString(2, nombre);
         ps.setString(3, primerApellido);
         ps.setString(4, segundoApellido);
-        ps.setInt(5, Integer.parseInt(semestre));
-        ps.setString(6, turno);
-        ps.setString(7, password);
+        ps.setString(5, correo);
+        ps.setInt(6, Integer.parseInt(semestre));
+        ps.setString(7, turno);
+        ps.setString(8, password);
         int resultado = ps.executeUpdate();
         return resultado;
 

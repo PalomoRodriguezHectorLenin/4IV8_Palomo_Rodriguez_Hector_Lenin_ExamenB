@@ -8,6 +8,10 @@
         <servlet-name>Iniciosesion</servlet-name>
         <servlet-class>AlumnoRegistro.Iniciosesion</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Cerrarsesion</servlet-name>
+        <servlet-class>AlumnoRegistro.Cerrarsesion</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AlumRegistro</servlet-name>
         <url-pattern>/AlumRegistro</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>Iniciosesion</servlet-name>
         <url-pattern>/Iniciosesion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Cerrarsesion</servlet-name>
+        <url-pattern>/Cerrarsesion</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
