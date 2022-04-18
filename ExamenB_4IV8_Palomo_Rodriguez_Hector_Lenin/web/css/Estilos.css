@@ -1,0 +1,39 @@
+#bienvendida{
+    background-color:burlywood;
+    position: absolute;
+    left: 450px;
+    width: 500px;
+}
+
+#iniciosesion{
+    position: absolute;
+    right: 200px;
+    top: 30px;
+}
+
+#maestro{
+    position: absolute;
+    left: 650px;
+    top: 200px;
+}
+
+#alumno{
+    position: absolute;
+    left: 650px;
+    top: 300px;
+}
+
+#Boton1{
+    width: 100px;
+    height: 40px;
+}
+
+#Boton2{
+    width: 100px;
+    height: 40px;
+}
+
+#Boton3{
+    width: 100px;
+    height: 40px;
+}

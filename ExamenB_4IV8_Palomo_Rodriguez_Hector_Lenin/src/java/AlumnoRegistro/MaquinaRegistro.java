@@ -65,10 +65,12 @@ public class MaquinaRegistro extends HttpServlet {
         String laboratorio = request.getParameter("Laboratorio");
         String maquina = request.getParameter("Maquina");
         String fregistro = request.getParameter("Fecharegistro");
+        int resultado = 0;
+        PrintWriter out = response.getWriter();
+        String mensajeError="";
         
         
-        
-        try ( PrintWriter out = response.getWriter()) {
+        try{
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -76,13 +78,28 @@ public class MaquinaRegistro extends HttpServlet {
             out.println("<title>Servlet MaquinaRegistro</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet MaquinaRegistro at " + request.getContextPath() + "</h1>");
-            out.println("<h2>La marca es: "+marca+"</h2>");
-            out.println("<h2>El Modelo es: "+modelo+" </h2>");
-            out.println("<h2>El Laboratorio es: "+laboratorio+"</h2>");
-            out.println("<h2>LEL que la registro fue: "+maquina+"</h2>");
-            out.println("<h2>La fecha fue en: "+fregistro+"</h2>");
-            out.println("<button onclick=\"window.location='./inicio.jsp'\"></buttton");
+//            out.println("<h2>La marca es: "+marca+"</h2>");
+//            out.println("<h2>El Modelo es: "+modelo+" </h2>");
+//            out.println("<h2>El Laboratorio es: "+laboratorio+"</h2>");
+//            out.println("<h2>El que la registro fue: "+maquina+"</h2>");
+//            out.println("<h2>La fecha fue en: "+fregistro+"</h2>");
+            resultado = consultaRegistroMaquina(marca,modelo,laboratorio,maquina,fregistro);
+            if(resultado==1){
+                out.println("<h1>El registro de la maquina fue satisfactorio</h1>");
+            }
+        }catch(SQLException e){
+            resultado=0;
+            mensajeError = e.getMessage();
+            if(e.getErrorCode() == 1062){
+                out.println("<h1>El registro de la maquina no fue satisfactoria ya que existe un registro con esta maquina.</h1>");
+            }else{
+                out.println("<h1>El registro no fue satisfactorio, codigo de error:"+e.getErrorCode()+": "+mensajeError+"</h1>");
+            }
+        }
+        finally{
+            out.println("<div id='Volveralmenu5'>");
+            out.println("<button onclick=\"window.location='./inicio.jsp'\">Volver al Menú</buttton");
+            out.println("</div>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -94,12 +111,13 @@ public class MaquinaRegistro extends HttpServlet {
             String maquina,
             String fregistro) throws SQLException {
         
-            String isql ="insert into maquina_registro(modelo,laboratorio,maquina,fregistro)" + "values (?,?,?,?)";
+            String isql ="insert into maquina_registro(modelo,laboratorio,maquina,fregistro)" + "values (?,?,?,?,?)";
             PreparedStatement ps = con.prepareStatement(isql);
-            ps.setString(1, modelo);
-            ps.setString(2, laboratorio);
-            ps.setString(3, maquina);
-            ps.setString(4, fregistro);
+            ps.setString(1, marca);
+            ps.setString(2, modelo);
+            ps.setString(3, laboratorio);
+            ps.setString(4, maquina);
+            ps.setString(5, fregistro);
             return 0;
     
     }

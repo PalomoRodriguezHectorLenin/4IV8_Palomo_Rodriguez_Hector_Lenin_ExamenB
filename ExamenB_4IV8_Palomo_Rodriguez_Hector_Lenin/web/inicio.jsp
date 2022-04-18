@@ -38,7 +38,7 @@
         </div>
         <br>
         <div id="botonini3">
-            <button onclick="window.location='./registroproblematecnico.html'">Registro de problema técnico</button>
+            <button onclick="window.location='./registrodeproblematecnico.html'">Registro de problema técnico</button>
         </div>
         <br>
         <div id="botonini4">
