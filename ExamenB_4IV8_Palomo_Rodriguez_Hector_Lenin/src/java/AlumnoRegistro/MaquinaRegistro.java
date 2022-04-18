@@ -14,6 +14,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 /**
  *
@@ -73,9 +74,22 @@ public class MaquinaRegistro extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet MaquinaRegistro at " + request.getContextPath() + "</h1>");
+            out.println("<button onclick=\"window.location='./inicio.jsp'\"></buttton");
             out.println("</body>");
             out.println("</html>");
         }
+    }
+    
+    private int consultaRegistroMaquina(String marca,
+            String modelo,
+            String laboratorio,
+            String maquina,
+            String freguistro) throws SQLException {
+        
+            String isql ="insert ";
+    
+            return 0;
+    
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
