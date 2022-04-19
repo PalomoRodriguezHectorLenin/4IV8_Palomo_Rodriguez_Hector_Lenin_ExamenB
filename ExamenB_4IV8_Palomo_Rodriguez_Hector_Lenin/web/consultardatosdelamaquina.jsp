@@ -12,8 +12,8 @@
 <%!
     static Connection con = null;
 
-    static {
-        // se deben de establecer los elementos para la conexion con bd
+    public void jspInit(){
+    // se deben de establecer los elementos para la conexion con bd
         String url = "jdbc:mysql://localhost:3306/maquinas";
         //controlador:motorBD:puerto/IP/nombreBD
         String username = "root";
@@ -29,6 +29,13 @@
             System.out.println("No conecto");
             System.out.println(e.getMessage());
             System.out.println(e.getStackTrace());
+        }
+    }
+    public void jspDestroy(){
+         try {
+            con.close();
+        } catch (Exception e) {
+            super.destroy();
         }
     }
 %>
