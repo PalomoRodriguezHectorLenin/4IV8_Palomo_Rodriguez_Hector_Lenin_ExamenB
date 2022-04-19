@@ -30,24 +30,24 @@
         <div id="titulo">
         <h2>Menú</h2>
         </div>
-        <div id="botonini1">
-            <button onclick="window.location='./registromaquina.html'" id="Boton9">Registrar Maquina</button>
-        </div>
-        <br>
         <div id="botonini2">
             <button onclick="window.location='./perfilusuario.jsp'" id="Boton10">Perfil del usuario</button>
         </div>
         <br>
-        <div id="botonini3">
-            <button onclick="window.location='./registrodeproblematecnico.html'" id="Boton11">Registro de problema técnico</button>
-        </div>
-        <br>
-        <div id="botonini4">
-            <button onclick="window.location='./consultarbitacora.html'" id="Boton12">Consultar Bitacora</button>
+        <div id="botonini1">
+            <button onclick="window.location='./registromaquina.html'" id="Boton9">Registrar Maquina</button>
         </div>
         <br>
         <div id="botonini5">
             <button onclick="window.location='./consultardatosdelamaquina.jsp'" id="Boton13">Consultar datos de la maquina</button>
+        </div>
+        <br>
+        <div id="botonini3">
+            <button onclick="window.location='./registroproblematecnico.jsp'" id="Boton11">Registro de problema técnico</button>
+        </div>
+        <br>
+        <div id="botonini4">
+            <button onclick="window.location='./consultarbitacora.html'" id="Boton12">Consultar Bitacora</button>
         </div>
         <br>
         <div id="botonini6">
