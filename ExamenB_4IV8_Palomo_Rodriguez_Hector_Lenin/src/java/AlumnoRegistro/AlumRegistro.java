@@ -198,6 +198,7 @@ public class AlumRegistro extends HttpServlet {
         ps.setString(7, turno);
         ps.setString(8, password);
         int resultado = ps.executeUpdate();
+        ps.close();
         return resultado;
 
     }
