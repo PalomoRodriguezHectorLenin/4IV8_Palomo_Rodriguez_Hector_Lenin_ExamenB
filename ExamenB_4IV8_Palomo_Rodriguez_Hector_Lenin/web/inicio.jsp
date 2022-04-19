@@ -47,7 +47,7 @@
         </div>
         <br>
         <div id="botonini5">
-            <button onclick="window.location='./consultardatosdelamaquina.html'" id="Boton13">Consultar datos de la maquina</button>
+            <button onclick="window.location='./consultardatosdelamaquina.jsp'" id="Boton13">Consultar datos de la maquina</button>
         </div>
         <br>
         <div id="botonini6">

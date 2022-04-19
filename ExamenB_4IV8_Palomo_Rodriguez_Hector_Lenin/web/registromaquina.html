@@ -11,15 +11,20 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <link rel="stylesheet" href="./css/Estilos.css">
     </head>
     <body>
-        <div id="botonvolvermenu">
-            <button onclick="window.location='./inicio.jsp'" id="Boton15">Volver al Menú</button>
-        </div>
+        
         <fieldset>
             <legend>Registro de alumno</legend>
             <form name="frm_registro_maquina" action="MaquinaRegistro" method="post" onsubmit="return ">
                 <div id="indicacion3">
                     <h1>Para registrar la maquina, introduzca los datos que se le piden a continuación, una vez
                         terminado darle click a registrar maquina</h1>
+                </div>
+                <br>
+                <div id="regiscampo2">
+                    <label>
+                        Introduzca el id
+                        <input type="text" id="id" name="Id" size="35" maxlength="35" required>
+                    </label> 
                 </div>
                 <br>
                 <div id="regiscampo1">
@@ -59,8 +64,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <br>
                 <div id="botonregistromaq">
                     <input type="submit" value="Registrar maquina" id="Boton16">
-                </div>
+                </div>   
             </form>
         </fieldset>
+        <br>
+        <div id="botonvolvermenu">
+            <button onclick="window.location='./inicio.jsp'" id="Boton15">Volver al Menú</button>
+        </div>
     </body>
 </html>
