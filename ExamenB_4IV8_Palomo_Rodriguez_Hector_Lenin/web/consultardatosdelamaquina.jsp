@@ -64,7 +64,7 @@
             <%
                 String boleta = (String) session.getAttribute("usuario");
 
-                String isql = "SELECT * FROM maquinas.maquina_registro as mr where mr.boleta=?";
+                String isql = "SELECT * FROM maquinas.maquina_registro as mr where mr.boleta=? order by mr.fecharegistro desc";
                 PreparedStatement ps = con.prepareStatement(isql);
                 ps.setString(1, boleta);
                 ResultSet rs = ps.executeQuery();
@@ -73,14 +73,14 @@
                 String marca = null;
                 String modelo = null;
                 String laboratorio = null;
-                String fregistro = null;
+                String fecharegistro = null;
 
                 while (rs.next()) {
                     id = rs.getString("id");
                     marca = rs.getString("marca");
                     modelo = rs.getString("modelo");
                     laboratorio = rs.getString("laboratorio");
-                    fregistro = rs.getString("fregistro");
+                    fecharegistro = rs.getString("fecharegistro");
             %>
             <tr>
                 <td><%=id%></td>
@@ -88,7 +88,7 @@
                 <td><%=modelo%></td>
                 <td><%=laboratorio%></td>
                 <td><%=boleta%></td>
-                <td><%=fregistro%></td>
+                <td><%=fecharegistro%></td>
             </tr>
             <%
                 }

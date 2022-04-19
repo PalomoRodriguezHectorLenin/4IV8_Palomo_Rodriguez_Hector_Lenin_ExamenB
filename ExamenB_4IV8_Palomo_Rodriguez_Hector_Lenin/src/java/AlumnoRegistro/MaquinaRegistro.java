@@ -12,6 +12,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -59,12 +60,13 @@ public class MaquinaRegistro extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
+        HttpSession session = request.getSession();
+        
         String id = request.getParameter("Id");
         String marca = request.getParameter("Marca");
         String modelo = request.getParameter("Modelo");
         String laboratorio = request.getParameter("Laboratorio");
-        String boleta = request.getParameter("Boleta");
-        String fregistro = request.getParameter("Fecharegistro");
+        String boleta = (String) session.getAttribute("usuario");
         int resultado = 0;
         PrintWriter out = response.getWriter();
         String mensajeError="";
@@ -83,7 +85,7 @@ public class MaquinaRegistro extends HttpServlet {
 //            out.println("<h2>El Laboratorio es: "+laboratorio+"</h2>");
 //            out.println("<h2>El que la registro fue: "+maquina+"</h2>");
 //            out.println("<h2>La fecha fue en: "+fregistro+"</h2>");
-            resultado = consultaRegistroMaquina(id,marca,modelo,laboratorio,boleta,fregistro);
+            resultado = consultaRegistroMaquina(id,marca,modelo,laboratorio,boleta);
             if(resultado==1){
                 out.println("<h1>El registro de la maquina fue satisfactorio</h1>");
             }
@@ -109,17 +111,16 @@ public class MaquinaRegistro extends HttpServlet {
             String marca,
             String modelo,
             String laboratorio,
-            String boleta,
-            String fregistro) throws SQLException {
+            String boleta) throws SQLException {
         
-            String isql ="insert into maquina_registro(id,marca,modelo,laboratorio,boleta,fregistro)" + "values(?,?,?,?,?,?)";
+            String isql ="insert into maquina_registro(id,marca,modelo,laboratorio,boleta,fecharegistro)" + "values(?,?,?,?,?,now())";
             PreparedStatement ps = con.prepareStatement(isql);
             ps.setString(1, id);
             ps.setString(2, marca);
             ps.setString(3, modelo);
             ps.setString(4, laboratorio);
             ps.setLong(5, Long.parseLong(boleta));
-            ps.setString(6, fregistro);
+            
             int resultado = ps.executeUpdate();
             return resultado;
     

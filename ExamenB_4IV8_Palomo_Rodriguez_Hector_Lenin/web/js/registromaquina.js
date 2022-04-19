@@ -5,7 +5,7 @@ function validarDatosRM(){
     var laboratorio = document.getElementById("laboratorio");
     
     if(id.value.trim()==""){
-        alert("Debes de introducir un id");
+        alert("Debes de introducir el numero de serie");
         return false;
     }else{
         if(marca.value.trim()==""){

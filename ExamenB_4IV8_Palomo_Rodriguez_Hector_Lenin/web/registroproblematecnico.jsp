@@ -75,14 +75,14 @@
                                 String marca = null;
                                 String modelo = null;
                                 String laboratorio = null;
-                                String fregistro = null;
+                                String fecharegistro = null;
 
                                 while (rs.next()) {
                                 id = rs.getString("id");
                                 marca = rs.getString("marca");
                                 modelo = rs.getString("modelo");
                                 laboratorio = rs.getString("laboratorio");
-                                fregistro = rs.getString("fregistro");
+                                fecharegistro = rs.getString("fecharegistro");
                             %>
                             
                             <option value="<%=id%>"><%=id%></option>
