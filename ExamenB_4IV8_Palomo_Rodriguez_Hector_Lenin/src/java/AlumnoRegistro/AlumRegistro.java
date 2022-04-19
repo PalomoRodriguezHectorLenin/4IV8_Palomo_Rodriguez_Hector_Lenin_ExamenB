@@ -156,26 +156,7 @@ public class AlumRegistro extends HttpServlet {
             out.println("</html>");
         }
 
-//        try ( PrintWriter out = response.getWriter()) {
-//            /* TODO output your page here. You may use following sample code. */
-//            out.println("<!DOCTYPE html>");
-//            out.println("<html>");
-//            out.println("<head>");
-//            out.println("<title>Servlet AlumRegistro</title>");            
-//            out.println("</head>");
-//            out.println("<body>");
-//            out.println("<h1>Servlet AlumRegistro at " + request.getContextPath() + "</h1>");
-//            out.println("<h1>Resultado:"+resultado+"</h1>");
-//            out.println("<h1>Boleta:"+boleta+"</h1>");
-//            out.println("<h1>Nombre:"+nombre+"</h1>");
-//            out.println("<h1>Primer Apellido:"+primerApellido+"</h1>");
-//            out.println("<h1>Segundo Apellido:"+segundoApellido+"</h1>");
-//            out.println("<h1>Semestre:"+semestre+"</h1>");
-//            out.println("<h1>Turno:"+turno+"</h1>");
-//            out.println("<h1>Contraseña:"+password+"</h1>");
-//            out.println("</body>");
-//            out.println("</html>");
-//        }
+
     }
 
     private int altaCuenta(String boleta,

@@ -53,7 +53,7 @@
     <body>
         <fieldset>
             <legend>Describir Problema Tecnico</legend>
-            <form name="frm_registro_problema" action="" method="post" onsubmit="return validarDatosRP()">
+            <form name="frm_registro_problema" action="RegistroProblemaTecnico" method="post" onsubmit="return validarDatosRP()">
                 <div id="indicaciones4">
                     <h1>A continuación debera de seleccionar el id de la maquina y describir el problema</h1>
                 </div>

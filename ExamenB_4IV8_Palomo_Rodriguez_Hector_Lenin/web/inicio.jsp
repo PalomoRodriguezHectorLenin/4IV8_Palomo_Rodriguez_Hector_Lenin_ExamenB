@@ -47,7 +47,7 @@
         </div>
         <br>
         <div id="botonini4">
-            <button onclick="window.location='./consultarbitacora.html'" id="Boton12">Consultar Bitacora</button>
+            <button onclick="window.location='./consultarbitacora.jsp'" id="Boton12">Consultar Bitacora</button>
         </div>
         <br>
         <div id="botonini6">
