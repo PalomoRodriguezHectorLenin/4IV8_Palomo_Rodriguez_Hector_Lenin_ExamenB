@@ -16,6 +16,10 @@
         <servlet-name>perfildellusuario</servlet-name>
         <servlet-class>AlumnoRegistro.PerfildelUsuario</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RegistroProblemaTecnico</servlet-name>
+        <servlet-class>AlumnoRegistro.RegistroProblemaTecnico</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AlumRegistro</servlet-name>
         <url-pattern>/AlumRegistro</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>perfildellusuario</servlet-name>
         <url-pattern>/perfildellusuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegistroProblemaTecnico</servlet-name>
+        <url-pattern>/RegistroProblemaTecnico</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
