@@ -8,6 +8,7 @@
   String nombre = (String)session.getAttribute("nombre");
   String primerApellido = (String)session.getAttribute("primerApellido");
   String segundoApellido = (String)session.getAttribute("segundoApellido");
+  String correo= (String)session.getAttribute("correo");
   String semestre = (String)session.getAttribute("semestre");
   String turno = (String)session.getAttribute("turno");
  %>
@@ -21,7 +22,7 @@
         <link rel="stylesheet" href="./css/Estilos.css">
     </head>
     <body>
-        <table>
+        <table border="1">
             <tr>
                 <th>Boleta: <%=usuario%></th>
             </tr>
@@ -30,7 +31,10 @@
                 <th>Primer Apellido: <%=primerApellido%></th>
             </tr>
             <tr>
-                <th>Segundo Apellido <%=segundoApellido%></th>
+                <th>Segundo Apellido: <%=segundoApellido%></th>
+            </tr>
+            <tr>
+                <th>Correo Electronico: <%=correo%></th>
             </tr>
             <tr>
                 <th>Semestre: <%=semestre%></th>
@@ -39,6 +43,7 @@
                 <th>Turno: <%=turno%></th>
             </tr>
         </table>
+            <br>
         <div id="botonvolverinicio2">
             <button onclick="window.location='./inicio.jsp'">Volver al Menú</button>
         </div>

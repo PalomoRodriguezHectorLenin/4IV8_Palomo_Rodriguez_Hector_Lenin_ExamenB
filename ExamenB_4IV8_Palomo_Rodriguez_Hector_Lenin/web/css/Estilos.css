@@ -223,3 +223,10 @@ h2{
     background-color:darksalmon;
     height: 25px;
 }
+
+#indicaciones5{
+    background-color:burlywood;
+    position:static;
+    left: 300px;
+    width: 100%;
+}
