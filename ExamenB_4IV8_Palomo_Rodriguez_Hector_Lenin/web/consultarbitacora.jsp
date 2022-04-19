@@ -47,6 +47,7 @@
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/Estilos.css">
     </head>
     <body>
          <div id="indicaciones5">
@@ -89,8 +90,8 @@
         </table>
         
         <br>
-        <div>
-            <button onclick="window.location='./inicio.jsp'">Volver al Menú</button>
+        <div id="volveralmenu1">
+            <button onclick="window.location='./inicio.jsp'" id="Boton21">Volver al Menú</button>
         </div>
     </body>
 </html>

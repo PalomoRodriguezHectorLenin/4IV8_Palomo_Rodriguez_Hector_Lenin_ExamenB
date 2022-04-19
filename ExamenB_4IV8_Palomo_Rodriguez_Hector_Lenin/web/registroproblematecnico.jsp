@@ -48,6 +48,7 @@
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/Estilos.css">
         <script type="text/javascript" src="./js/registroproblematecnico.js"></script>
     </head>
     <body>
@@ -111,7 +112,7 @@
         </fieldset>
         <br>
         <div id="botonvolveralinicio4">
-            <button onclick="window.location='./inicio.jsp'">Volver al Menú</button>
+            <button onclick="window.location='./inicio.jsp'" id="Boton20">Volver al Menú</button>
         </div>
     </body>
 </html>

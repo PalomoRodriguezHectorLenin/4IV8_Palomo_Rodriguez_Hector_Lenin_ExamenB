@@ -45,7 +45,7 @@
         </table>
             <br>
         <div id="botonvolverinicio2">
-            <button onclick="window.location='./inicio.jsp'">Volver al Menú</button>
+            <button onclick="window.location='./inicio.jsp'" id="Boton18">Volver al Menú</button>
         </div>
     </body>
 </html>
